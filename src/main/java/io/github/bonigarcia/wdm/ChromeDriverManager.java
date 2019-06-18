@@ -109,7 +109,7 @@ public class ChromeDriverManager extends WebDriverManager {
 
     @Override
     protected Optional<String> getLatestVersion() {
-        String url = config().getChromeDriverUrl() + "LATEST_RELEASE";
+        String url = getDriverUrl() + "LATEST_RELEASE";
         Optional<String> version = Optional.empty();
         try {
             InputStream response = httpClient
